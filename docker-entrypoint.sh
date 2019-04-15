@@ -74,6 +74,6 @@ echo 0 > /var/run/upsmon.pid
 cd /app/webNUT && python setup.py install
 
 cd webnut
-exec pserve ../production.SECRET
+exec pserve ../production.ini
 
 
