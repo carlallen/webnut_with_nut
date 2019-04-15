@@ -36,6 +36,14 @@ RUN_AS_USER $USER
 EOF
 fi
 
+if [[ ! -f /etc/nut/nut.conf ]]; then
+  cat >/etc/nut/nut.conf <<EOF
+MODE=standalone
+EOF
+fi
+
+
+
 echo "server = '$upshost'" > /app/webNUT/webnut/config.py
 echo "port = '$upsport'" >> /app/webNUT/webnut/config.py
 echo "username = '$upsuser'" >> /app/webNUT/webnut/config.py
