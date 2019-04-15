@@ -11,7 +11,10 @@ ENV API_USER=monuser \
     GROUP=nut \
     DRIVER=usbhid-ups
 
-RUN apt-get install nut
+RUN apt-get clean
+RUN apt-get update
+RUN apt-get -qy install nut
+RUN apt-get -qy autoremove
 
 RUN mkdir /app && \
     cd /app && \
