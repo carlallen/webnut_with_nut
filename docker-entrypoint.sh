@@ -53,8 +53,11 @@ cat /app/webNUT/webnut/config.py
 
 cd /app/webNUT && python setup.py install
 
-chgrp -R nut /etc/nut
+chgrp -R $GROUP /etc/nut /dev/bus/usb
 chmod -R o-rwx /etc/nut
+
+echo 0 > /var/run/nut/upsd.pid && chown $USER.$GROUP /var/run/nut/upsd.pid
+echo 0 > /var/run/upsmon.pid
 
 /sbin/upsdrvctl -u root start
 /sbin/upsd -u $USER
