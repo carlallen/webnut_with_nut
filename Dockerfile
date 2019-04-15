@@ -25,6 +25,8 @@ RUN echo '@edge http://dl-cdn.alpinelinux.org/alpine/edge/main' \
       libcrypto1.1@edge libssl1.1@edge net-snmp-libs@edge
 
 
+RUN apk add git
+
 RUN mkdir /app && \
 cd /app && \
 git clone https://github.com/rshipp/python-nut2.git && \
