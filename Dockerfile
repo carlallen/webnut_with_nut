@@ -1,4 +1,4 @@
-FROM ptyhon:2.7-alpine
+FROM python:2.7-alpine
 MAINTAINER Carl Allen "github@allenofmn.com"
 ARG BUILD_DATE
 ARG VCS_REF
