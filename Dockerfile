@@ -39,5 +39,5 @@ pip install -e .
 WORKDIR /app/webNUT
 
 EXPOSE 3493 6543
-COPY entrypoint.sh /usr/local/bin/
-ENTRYPOINT /usr/local/bin/entrypoint.sh
+COPY docker-entrypoint.sh /usr/local/bin/
+ENTRYPOINT /usr/local/bin/docker-entrypoint.sh
